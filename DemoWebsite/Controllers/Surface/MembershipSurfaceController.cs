@@ -62,10 +62,11 @@ namespace DemoSite.Controllers.Surface
 
             if (Members.Login(model.Username, model.Password))
             {
-                if (model.MyAccountPage > 0) {
+                if (model.MyAccountPage > 0)
+                {
                     return RedirectToUmbracoPage(model.MyAccountPage);
                 }
-                return Redirect("/");
+                return Redirect("/myAccount");
             }
             else
             {

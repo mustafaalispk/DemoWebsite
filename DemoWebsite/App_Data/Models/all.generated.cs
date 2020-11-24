@@ -6,8 +6,8 @@ using  Umbraco.Core.Models;
 using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder.Embedded;
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "a5973bb0a988af47")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "d801c10971f42553")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 
 // FILE: models.generated.cs
@@ -76,11 +76,32 @@ namespace Umbraco.Web.PublishedModels
 		public global::Newtonsoft.Json.Linq.JToken Grid => this.Value<global::Newtonsoft.Json.Linq.JToken>("grid");
 
 		///<summary>
+		/// Login page
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("loginPage")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent LoginPage => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("loginPage");
+
+		///<summary>
 		/// Logo
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		[ImplementPropertyType("logo")]
 		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent Logo => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("logo");
+
+		///<summary>
+		/// My Account Page
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("myAccountPage")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent MyAccountPage => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("myAccountPage");
+
+		///<summary>
+		/// Registration page
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("registrationPage")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent RegistrationPage => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("registrationPage");
 
 		///<summary>
 		/// Top Banner
@@ -102,6 +123,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		[ImplementPropertyType("seoTitle")]
 		public string SeoTitle => global::Umbraco.Web.PublishedModels.SEO.GetSeoTitle(this);
+
+		///<summary>
+		/// Visible in Menu
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("visibleInMenu")]
+		public bool VisibleInMenu => global::Umbraco.Web.PublishedModels.SEO.GetVisibleInMenu(this);
 	}
 
 	/// <summary>Grid page</summary>
@@ -156,6 +184,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		[ImplementPropertyType("seoTitle")]
 		public string SeoTitle => global::Umbraco.Web.PublishedModels.SEO.GetSeoTitle(this);
+
+		///<summary>
+		/// Visible in Menu
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("visibleInMenu")]
+		public bool VisibleInMenu => global::Umbraco.Web.PublishedModels.SEO.GetVisibleInMenu(this);
 	}
 
 	/// <summary>Topbanner</summary>
@@ -262,6 +297,10 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		string SeoTitle { get; }
+
+		/// <summary>Visible in Menu</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		bool VisibleInMenu { get; }
 	}
 
 	/// <summary>SEO</summary>
@@ -310,6 +349,17 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		public static string GetSeoTitle(ISEO that) => that.Value<string>("seoTitle");
+
+		///<summary>
+		/// Visible in Menu
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("visibleInMenu")]
+		public bool VisibleInMenu => GetVisibleInMenu(this);
+
+		/// <summary>Static getter for Visible in Menu</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public static bool GetVisibleInMenu(ISEO that) => that.Value<bool>("visibleInMenu");
 	}
 
 	/// <summary>Registration</summary>
@@ -364,6 +414,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		[ImplementPropertyType("seoTitle")]
 		public string SeoTitle => global::Umbraco.Web.PublishedModels.SEO.GetSeoTitle(this);
+
+		///<summary>
+		/// Visible in Menu
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("visibleInMenu")]
+		public bool VisibleInMenu => global::Umbraco.Web.PublishedModels.SEO.GetVisibleInMenu(this);
 	}
 
 	/// <summary>Folder</summary>
@@ -587,6 +644,102 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		[ImplementPropertyType("umbracoMemberPasswordRetrievalQuestion")]
 		public global::System.DateTime UmbracoMemberPasswordRetrievalQuestion => this.Value<global::System.DateTime>("umbracoMemberPasswordRetrievalQuestion");
+	}
+
+	/// <summary>Test</summary>
+	[PublishedModel("test")]
+	public partial class Test : PublishedContentModel
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new const string ModelTypeAlias = "test";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Member;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Test, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public Test(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// Intrested in
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("interestedIn")]
+		public string InterestedIn => this.Value<string>("interestedIn");
+
+		///<summary>
+		/// Is Approved
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("umbracoMemberApproved")]
+		public bool UmbracoMemberApproved => this.Value<bool>("umbracoMemberApproved");
+
+		///<summary>
+		/// Comments
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("umbracoMemberComments")]
+		public string UmbracoMemberComments => this.Value<string>("umbracoMemberComments");
+
+		///<summary>
+		/// Failed Password Attempts
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("umbracoMemberFailedPasswordAttempts")]
+		public int UmbracoMemberFailedPasswordAttempts => this.Value<int>("umbracoMemberFailedPasswordAttempts");
+
+		///<summary>
+		/// Last Lockout Date
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("umbracoMemberLastLockoutDate")]
+		public global::System.DateTime UmbracoMemberLastLockoutDate => this.Value<global::System.DateTime>("umbracoMemberLastLockoutDate");
+
+		///<summary>
+		/// Last Login Date
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("umbracoMemberLastLogin")]
+		public global::System.DateTime UmbracoMemberLastLogin => this.Value<global::System.DateTime>("umbracoMemberLastLogin");
+
+		///<summary>
+		/// Last Password Change Date
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("umbracoMemberLastPasswordChangeDate")]
+		public global::System.DateTime UmbracoMemberLastPasswordChangeDate => this.Value<global::System.DateTime>("umbracoMemberLastPasswordChangeDate");
+
+		///<summary>
+		/// Is Locked Out
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("umbracoMemberLockedOut")]
+		public bool UmbracoMemberLockedOut => this.Value<bool>("umbracoMemberLockedOut");
+
+		///<summary>
+		/// Password Answer
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("umbracoMemberPasswordRetrievalAnswer")]
+		public string UmbracoMemberPasswordRetrievalAnswer => this.Value<string>("umbracoMemberPasswordRetrievalAnswer");
+
+		///<summary>
+		/// Password Question
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("umbracoMemberPasswordRetrievalQuestion")]
+		public string UmbracoMemberPasswordRetrievalQuestion => this.Value<string>("umbracoMemberPasswordRetrievalQuestion");
 	}
 
 }

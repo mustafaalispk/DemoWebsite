@@ -1,6 +1,13 @@
 ﻿@model DemoSite.Models.RegisterModel
 @using ContentModels = Umbraco.Web.PublishedModels;
 
+@{ 
+    if (TempData["error"] != null)
+    {
+        @:<h1>@(TempData["error"])</h1>
+    }
+}
+
 @using (Html.BeginUmbracoForm<DemoSite.Controllers.Surface.MembershipSurfaceController>("Register", FormMethod.Post))
 {
 <div class="wrapper">

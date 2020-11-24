@@ -2711,6 +2711,7 @@
     <Content Include="Umbraco\Views\users\views\overlays\remove.html" />
     <Content Include="Umbraco\Views\users\views\users\users.html" />
     <Content Include="Umbraco\Views\users\views\user\details.html" />
+    <Content Include="Views\MacroPartials\Login.cshtml" />
     <Content Include="Views\Partials\BlockList\Default.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap3.cshtml" />
@@ -2852,6 +2853,7 @@
     <Content Include="Umbraco\Views\web.config" />
     <Content Include="Views\Partials\Register.cshtml" />
     <Content Include="Views\Registration.cshtml" />
+    <Content Include="Views\Partials\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2860,7 +2862,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\MacroPartials\" />
     <Folder Include="Views\MembershipSurface\" />
   </ItemGroup>
   <PropertyGroup>
