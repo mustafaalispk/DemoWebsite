@@ -44,7 +44,8 @@ namespace DemoSite.Controllers.Surface
             if (status == System.Web.Security.MembershipCreateStatus.Success)
             {
                 return Redirect("/myAccount");
-            } else
+            }
+            else
             {
                 TempData["error"] = status;
                 return CurrentUmbracoPage();
@@ -66,7 +67,7 @@ namespace DemoSite.Controllers.Surface
                 {
                     return RedirectToUmbracoPage(model.MyAccountPage);
                 }
-                return Redirect("/myAccount");
+                return Redirect("/");
             }
             else
             {
