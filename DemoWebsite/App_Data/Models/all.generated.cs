@@ -6,8 +6,8 @@ using  Umbraco.Core.Models;
 using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder.Embedded;
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "1f9d53cf3849e43d")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.5")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "a5973bb0a988af47")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
 // FILE: models.generated.cs
@@ -310,6 +310,60 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		public static string GetSeoTitle(ISEO that) => that.Value<string>("seoTitle");
+	}
+
+	/// <summary>Registration</summary>
+	[PublishedModel("registration")]
+	public partial class Registration : PublishedContentModel, INestedTopBanner, ISEO
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new const string ModelTypeAlias = "registration";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Registration, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public Registration(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// Grid
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("grid")]
+		public global::Newtonsoft.Json.Linq.JToken Grid => this.Value<global::Newtonsoft.Json.Linq.JToken>("grid");
+
+		///<summary>
+		/// Top Banner
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("topBanner")]
+		public global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.PublishedModels.Topbanner> TopBanner => global::Umbraco.Web.PublishedModels.NestedTopBanner.GetTopBanner(this);
+
+		///<summary>
+		/// Description
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("seoDescription")]
+		public string SeoDescription => global::Umbraco.Web.PublishedModels.SEO.GetSeoDescription(this);
+
+		///<summary>
+		/// Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("seoTitle")]
+		public string SeoTitle => global::Umbraco.Web.PublishedModels.SEO.GetSeoTitle(this);
 	}
 
 	/// <summary>Folder</summary>
